@@ -4,7 +4,7 @@ require('./author');
 var Book = bookshelf.Model.extend({
   tableName: 'book',
   authors: function() {
-    return this.belongsToMany(Author).through('author_book');
+    return this.belongsToMany('Author').through('Author_Book');
   }
 });
 

@@ -1,12 +1,14 @@
 var bookshelf = require('../db/bookshelf');
+require('./book')
+require('./author')
 
 var Author_Book = bookshelf.Model.extend({
   tableName: 'author_book',
   author: function () {
-    return this.hasMany('book')
+    return this.hasMany('Book');
   },
   book: function () {
-    return this.hasMany('author')
+    return this.hasMany('Author');
   }
 });
 
