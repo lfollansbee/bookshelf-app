@@ -1,12 +1,10 @@
 require('dotenv').config();
-module.exports = {
 
+module.exports = {
   development: {
     client: 'pg',
     connection: 'postgres://localhost/bookshelf-app'
   },
-
-
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL + '?ssl=true'

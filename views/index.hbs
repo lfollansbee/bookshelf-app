@@ -1,2 +1,6 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>My Books</h1>
+<ul>
+{{#each book}}
+  <li>{{this.title}}</li>
+{{/each}}
+</ul>
