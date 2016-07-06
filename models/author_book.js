@@ -1,6 +1,6 @@
 var bookshelf = require('../db/bookshelf');
-require('./book')
-require('./author')
+require('./book');
+require('./author');
 
 var Author_Book = bookshelf.Model.extend({
   tableName: 'author_book',

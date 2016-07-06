@@ -7,7 +7,8 @@ var Author_Book = require('../models/author_book');
 /* GET home page. */
 router.get('/', function(request, response, next) {
   Book.forge().fetchAll({ withRelated: 'authors' }).then(function(books) {
-    response.render('index', { books: books.toJSON() });
+    console.log(books.toJSON());
+    response.render('index', { book: books.toJSON() });
   });
 });
 

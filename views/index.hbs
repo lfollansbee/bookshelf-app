@@ -1,6 +1,9 @@
 <h1>My Books</h1>
-<ul>
 {{#each book}}
-  <li>{{this.title}}</li>
+  <h2>{{this.title}}</h2>
+  <p>{{this.description}}</p>
+  {{#each this.authors}}
+    <p>By: {{this.first_name}} {{this.last_name}}</p>
+  {{/each}}
+  <hr>
 {{/each}}
-</ul>
